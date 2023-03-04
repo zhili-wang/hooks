@@ -3,15 +3,14 @@ import { Link, useHistory } from 'react-router-dom';
 import { useLocationListen } from 'ahooks';
 
 const App = () => {
-  // const history = useHistory()
-  const onBeforeChange = (prevLocation, nextLocation) => {
-    console.log('handleBeforeChange', prevLocation, nextLocation);
-    // return window.confirm('Do you really want to leave?');
-    return false;
-  };
+  const history = useHistory();
 
-  const history = useLocationListen({ onBeforeChange });
-  const handleClick = () => {};
+  const location = useLocationListen({
+    onBeforeChange: (prevLocation, nextLocation) => {
+      console.info(prevLocation, nextLocation);
+      return window.confirm('Do you really want to leave?');
+    },
+  });
 
   return (
     <div>

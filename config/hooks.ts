@@ -18,6 +18,7 @@ export const menus = [
   {
     title: 'Scene',
     children: [
+      'useLocationListen',
       'useAntdTable',
       'useFusionTable',
       'useInfiniteScroll',
@@ -76,7 +77,6 @@ export const menus = [
       'useRafTimeout',
       'useLockFn',
       'useUpdate',
-      'useLocationListen',
     ],
   },
   {
