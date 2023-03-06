@@ -41,6 +41,7 @@ export const menus = [
     title: 'State',
     children: [
       'useSetState',
+      'useInstanceState',
       'useBoolean',
       'useToggle',
       'use-url-state',
